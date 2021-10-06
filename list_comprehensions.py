@@ -35,6 +35,7 @@ def vowel_count(str):
 fruits_with_more_than_two_vowels = [fruit for fruit in fruits if vowel_count(fruit) > 2]
 
 # Exercise 4 - make a variable named fruits_with_only_two_vowels. The result should be ['mango', 'kiwi', 'strawberry']
+fruits_with_only_two_vowels = [fruit for fruit in fruits if len(list(letter for letter in fruit if letter.lower() in 'aeiou')) == 2]
 
 # Exercise 5 - make a list that contains each fruit with more than 5 characters
 fruits_w_morethan_5chars = [fruit for fruit in fruits if len(fruit) > 5]

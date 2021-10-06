@@ -1,11 +1,11 @@
 ''' You have rented some movies for your kids: The little mermaid (for 3 days), Brother Bear (for 5 days, they love it), and Hercules (1 day, you don't know yet if they're going to like it). If price for a movie per day is 3 dollars, how much will you have to pay? ''' 
 
 movie_price_per_day = 3.0
-ittle_mermaid_days_rented = 3
+little_mermaid_days_rented = 3
 brother_bear_days_rented = 5
 hercules_days_rented = 1
 
-total_price = (little_mermaid_days_rented = brother_bear_days_rented + hercules_days_rented) * movie_price_per_day
+total_price = (little_mermaid_days_rented + brother_bear_days_rented + hercules_days_rented) * movie_price_per_day
 
 ''' Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook, they pay you a different rate per hour. Google pays 400 dollars per hour, Amazon 380, and Facebook 350. How much will you receive in payment for this week? You worked 10 hours for Facebook, 6 hours for Google and 4 hours for Amazon. ''' 
 
@@ -24,7 +24,7 @@ total_payment = (google_pay_per_hr * google_hrs_worked) + (amazon_pay_per_hr * a
 class_is_full = False
 schedule_conflict = False
 
-can_enroll_to_class = not class_is_full and not schedule_conflict
+can_enroll_to_class = (not class_is_full) and (not schedule_conflict)
 
 ''' A product offer can be applied only if people buys more than 2 items, and the offer has not expired. Premium members do not need to buy a specific amount of products.''' 
 
