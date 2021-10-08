@@ -5,8 +5,10 @@
 
 # In[3]:
 
+# the is_two function takes in x, either a string, int, or float, and returns a boolean
 
 def is_two(x):
+    # evaluates whether x is equal to the string, int, or float type of two
     return x in [2, '2', 'two']
 # print(is_two(24))
 
@@ -15,8 +17,9 @@ def is_two(x):
 
 # In[40]:
 
-
+# is_vowel takes in a single parameter, a letter as a string, and returns a boolean
 def is_vowel(some_letter):
+    # evaluates whether parameter is a single vowel
     return some_letter.lower() in 'aeiou'
 # print(is_vowel('A'))
 
@@ -25,8 +28,9 @@ def is_vowel(some_letter):
 
 # In[38]:
 
-
+# is_consonant takes in a single parameter, a letter as a string, and returns a boolean
 def is_consonant(some_letter):
+    # evaluates whether parameter is a single consonant using previous function
     return not is_vowel(some_letter)
 # print(is_consonant('a'))
 
@@ -35,9 +39,11 @@ def is_consonant(some_letter):
 
 # In[59]:
 
-
+# capitalize_consonants takes in a single parameter, a word as a string, and returns a string
 def capitalize_consonants(some_word):
+    # eliminates any leading or trailing whitespaces
     new_word = some_word.strip()
+    # evaluates and capitalizes first letter based on whether it is a consonant using previous function
     if is_consonant(some_word[0]):
         return new_word.capitalize()
 # print(capitalize_consonants(' puppies are the best!'))
@@ -47,8 +53,9 @@ def capitalize_consonants(some_word):
 
 # In[24]:
 
-
+# calculate_tip takes in two parameters, both as a float, and returns a float
 def calculate_tip(tip_percentage, bill_total):
+    # returns bill_total multiplied by tip_percentage and rounded to the second decimal place
     return round(bill_total * tip_percentage, 2)
 # print(calculate_tip(.3, 26.50))
 
@@ -57,8 +64,9 @@ def calculate_tip(tip_percentage, bill_total):
 
 # In[26]:
 
-
+# apply_discount takes in two parameters, both as a float, and returns a float
 def apply_discount(original_price, discount_percentage):
+    # returns original_price multiplied by 1 - discount_percentage and rounded to the second decimal place
     return round(original_price * (1 - discount_percentage), 2)
 # print(apply_discount(55, .25))
 
@@ -67,9 +75,11 @@ def apply_discount(original_price, discount_percentage):
 
 # In[31]:
 
-
+# handle_commas takes in one parameter, a string of numbers with commas, and returns an int
 def handle_commas(num_str_w_commas):
+    # creates a collector
     new_num_str = ''
+    # cycles through each character, adds to the collector if not a comma, then returns collector as int
     for num in num_str_w_commas:
         if num != ',':
             new_num_str += num
